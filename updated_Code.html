@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <title>Planner.com</title>
+
+    <style>
+        /* Extra small devices (phones) */
+        @media (max-width: 576px) {
+            .navbar-nav .nav-link {
+                font-size: 16px;
+            }
+
+            .container {
+                max-width: 100%;
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+        }
+
+        /* Small devices (landscape phones) */
+        @media (min-width: 576px) and (max-width: 767.98px) {
+            .container {
+                max-width: 100%;
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+        }
+
+        /* Medium devices (tablets) */
+        @media (min-width: 768px) and (max-width: 991.98px) {
+            .container {
+                max-width: 100%;
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+        }
+
+        /* Large devices (desktops) */
+        @media (min-width: 992px) {
+            .container {
+                max-width: 800px;
+            }
+        }
+
+        html {
+            scroll-behavior: auto;
+        }
+
+        *,
+        ::after,
+        ::before {
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+        table thead th {
+            vertical-align: bottom;
+            border-bottom: 2px solid #dee2e6;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        .table th,
+        .table td {
+            font-size: 16px;
+            color: black;
+            font-family: monospace;
+            font-weight: 600;
+        }
+
+        .footer {
+            background-color: #f8f9fa;
+
+            /* padding: 10px; */
+            text-align: center;
+            font-size: 9px;
+            top: 87px;
+            position: relative;
+            height: 30px;
+        }
+
+        .btn:not(:disabled):not(.disabled) {
+            cursor: auto;
+            border-radius: 28px;
+        }
+
+        body {
+            background-image: url('/project-4/checklist-g54994c4d6_1280.jpg');
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            opacity: 1.1;
+            z-index: -1;
+            transition: all 0.5s ease;
+
+        }
+
+        body:hover {
+            background-color: rgba(233, 211, 211, 0.5);
+            /* Change the background color on hover */
+        }
+
+        .navbar {
+            background: linear-gradient(to right, #00b4db, #0083b0);
+        }
+
+        .dropdown-menu {
+            background: linear-gradient(to right, #00b4db, #0083b0);
+        }
+
+        .dropdown-menu a {
+            color: #ffffff;
+        }
+
+        .dropdown-divider {
+            border-color: #ffffff;
+        }
+
+        .navbar-nav .nav-link {
+            font-size: 18px;
+            transition: background-color 0.3s ease;
+        }
+
+        .navbar-nav .nav-link:hover {
+            background-color: transparent;
+            color: #000000;
+        }
+
+        .container {
+            max-width: 800px;
+        }
+
+        .form-control {
+            font-size: 16px;
+        }
+
+        .table th,
+        .table td {
+            font-size: 16px;
+        }
+
+        .btn-primary {
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: #000000;
+        }
+
+        .footer {
+            background-color: #f8f9fa;
+            padding: 10px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        /* Extra small devices (phones) */
+        @media (max-width: 576px) {
+            .navbar-nav .nav-link {
+                font-size: 16px;
+            }
+
+            .container {
+                max-width: 100%;
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#">Planner.com</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Items
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Wedding</a>
+                        <a class="dropdown-item" href="#">Sports</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Academic event</a>
+                        <a class="dropdown-item" href="#">Add an event</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Contact</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"
+                    id="searchInput">
+                <button class="btn btn-outline-light my-2 my-sm-0" type="button" onclick="searchItems()">Search</button>
+            </form>
+        </div>
+    </nav>
+
+    <div class="container my-4">
+        <h2 class="text-center"></h2>
+
+        <div class="form-group">
+            <label for="title">Title</label>
+            <input type="text" class="form-control" id="title" aria-describedby="emailHelp" required>
+            <small id="emailHelp" class="form-text text-muted"></small>
+        </div>
+
+        <div class="form-group">
+            <label for="description">Description</label>
+            <textarea class="form-control" id="description" rows="3" required></textarea>
+        </div>
+
+
+        <button id="add" class="btn btn-primary" onclick="addItem()">Add to list</button>
+        <button id="clear" class="btn btn-primary" onclick="clearList()">Clear list</button>
+
+
+        <div id="items" class="my-4">
+            <h2>Your Items</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">SNo</th>
+                        <th scope="col">Item Title</th>
+                        <th scope="col">Item Description</th>
+                        <th scope="col">Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <footer class="footer">
+        &copy; 2023 Planner.com. All rights reserved.
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+    <script>
+        function addItem() {
+            const title = document.getElementById('title').value.trim();
+            const description = document.getElementById('description').value.trim();
+
+            if (title === "" || description === "") {
+                alert("Please enter a title and description for the item.");
+                return;
+            }
+
+            let items = localStorage.getItem('items') ? JSON.parse(localStorage.getItem('items')) : [];
+            items.push({ title: title, description: description });
+            localStorage.setItem('items', JSON.stringify(items));
+
+            updateTable();
+            clearForm();
+
+            alert("Item added successfully!");
+        }
+
+        function updateTable() {
+            const tableBody = document.getElementById("tableBody");
+            tableBody.innerHTML = "";
+
+            let items = localStorage.getItem('items') ? JSON.parse(localStorage.getItem('items')) : [];
+
+            items.forEach((item, index) => {
+                const row = document.createElement("tr");
+                row.innerHTML = `
+                    <th scope="row">${index + 1}</th>
+                    <td>${item.title}</td>
+                    <td>${item.description}</td>
+                    <td>
+                        <button class="btn btn-sm btn-primary" onclick="deleteItem(${index})">Delete</button>
+                        <button class="btn btn-sm btn-primary" onclick="editItem(${index})">Edit</button>
+                    </td>
+                `;
+                tableBody.appendChild(row);
+            });
+        }
+
+        function deleteItem(index) {
+            if (confirm("Are you sure you want to delete this item?")) {
+                let items = localStorage.getItem('items') ? JSON.parse(localStorage.getItem('items')) : [];
+                items.splice(index, 1);
+                localStorage.setItem('items', JSON.stringify(items));
+
+                updateTable();
+
+                alert("Item deleted successfully!");
+            }
+        }
+
+        function editItem(index) {
+            let items = localStorage.getItem('items') ? JSON.parse(localStorage.getItem('items')) : [];
+
+            const item = items[index];
+            document.getElementById('title').value = item.title;
+            document.getElementById('description').value = item.description;
+
+            // Remove the item from the list
+            items.splice(index, 1);
+            localStorage.setItem('items', JSON.stringify(items));
+
+            updateTable();
+
+            alert("You can now edit the item. Remember to click 'Add to list' to save the changes.");
+        }
+
+        function clearList() {
+            if (confirm("Do you really want to clear the list?")) {
+                localStorage.removeItem('items');
+                updateTable();
+
+                alert("List cleared successfully!");
+            }
+        }
+
+        function clearForm() {
+            document.getElementById('title').value = "";
+            document.getElementById('description').value = "";
+        }
+
+        function searchItems() {
+            const searchInput = document.getElementById("searchInput");
+            const searchTerm = searchInput.value.toLowerCase();
+            const tableBody = document.getElementById("tableBody");
+            tableBody.innerHTML = "";
+
+            let items = localStorage.getItem('items') ? JSON.parse(localStorage.getItem('items')) : [];
+
+            items.forEach((item, index) => {
+                const title = item.title.toLowerCase();
+                const description = item.description.toLowerCase();
+
+                if (title.includes(searchTerm) || description.includes(searchTerm)) {
+                    const row = document.createElement("tr");
+                    row.innerHTML = `
+                        <th scope="row">${index + 1}</th>
+                        <td>${item.title}</td>
+                        <td>${item.description}</td>
+                        <td>
+                            <button class="btn btn-sm btn-primary" onclick="deleteItem(${index})">Delete</button>
+                            <button class="btn btn-sm btn-primary" onclick="editItem(${index})">Edit</button>
+                        </td>
+                    `;
+                    tableBody.appendChild(row);
+                }
+            });
+        }
+
+        // Initial table update
+        updateTable();
+    </script>
+</body>
+
+</html>
